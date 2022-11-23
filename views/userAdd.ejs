@@ -1,0 +1,45 @@
+<%layout('layouts/boilerplate')%>
+    <div class="row">
+        <h1 class="text-center">Add User</h1>
+        <div class="col-6 offset-3">
+           
+    <form action="/addUsers" method="post" enctype="multipart/form-data">
+        <div class="mb-3">
+            <label class="form-label" for="username">Username</label>
+            <input class="form-control" type="text" id="username" name="user[username]">
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="email">Email</label>
+            <input class="form-control" type="email" id="email" name="user[email]">
+        </div>
+        <div class="mb-3">
+            
+            <label class="form-label" for="gender">Gender</label>
+            <input type="radio" id="gender" value="Male" name="user[gender]">Male
+            <input type="radio" id="gender" value="Female" name="user[gender]">Female
+         <!--   <input class="form-control" type="text" id="gender" name="user[gender]">-->
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="age">Age</label>
+            <input class="form-control" type="text" id="age" name="user[age]">
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="role">Role</label>
+            <input class="form-control" type="text" id="role" name="user[role]">
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="image">image</label>
+            <input class="form-control" type="file" id="image" name="image" multiple>
+        </div>
+        <div class="mb-3">
+        <button class="btn btn-success"  type="submit">Add User</button>
+        
+            <a class="btn btn-secondary d-inline" href="/users">Back to Home Page</a>
+
+        </div>
+    </form>
+   
+   
+
+        </div>
+    </div>
